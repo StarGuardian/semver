@@ -112,7 +112,7 @@ class VersionParser
 
         // match master-like branches
         if (preg_match('{^(?:dev-)?(?:master|trunk|default)$}i', $version)) {
-            return '9999999-dev';
+            return '999999999-dev';
         }
 
         // if requirement is branch-like, use full name
@@ -126,7 +126,7 @@ class VersionParser
         }
 
         // match classical versioning
-        if (preg_match('{^v?(\d{1,5})(\.\d++)?(\.\d++)?(\.\d++)?' . self::$modifierRegex . '$}i', $version, $matches)) {
+        if (preg_match('{^v?(\d{1,8})(\.\d++)?(\.\d++)?(\.\d++)?' . self::$modifierRegex . '$}i', $version, $matches)) {
             $version = $matches[1]
                 . (!empty($matches[2]) ? $matches[2] : '.0')
                 . (!empty($matches[3]) ? $matches[3] : '.0')
