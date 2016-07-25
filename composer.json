@@ -1,5 +1,5 @@
 {
-    "name": "composer/semver",
+    "name": "starguardian/semver",
     "description": "Semver library that offers utilities, version constraint parsing and validation.",
     "type": "library",
     "license": "MIT",
